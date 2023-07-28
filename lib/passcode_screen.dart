@@ -91,15 +91,9 @@ class _PasscodeScreenState extends State<PasscodeScreen>
     return Scaffold(
       backgroundColor: widget.backgroundColor ?? Colors.black.withOpacity(0.8),
       body: SafeArea(
-        child: OrientationBuilder(
-          builder: (context, orientation) {
-            return orientation == Orientation.portrait
-                ? _buildPortraitPasscodeScreen()
-                : _buildLandscapePasscodeScreen();
-          },
-        ),
+        child: _buildPortraitPasscodeScreen()        
       ),
-    );
+    ),
   }
 
   _buildPortraitPasscodeScreen() => Stack(
